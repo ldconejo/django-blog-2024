@@ -28,3 +28,6 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
+    - name: Code Style Check
+      run: |
+        black --check blogging django_blog polling
