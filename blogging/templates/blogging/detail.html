@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ post }}</h1>
+    <p class="byline">
+        Posted by {{ post.author.username }}
+    </p>
+    <div class="post-body">
+        {{ post.text }}
+    </div>
+    <ul class="categories">
+        {% for category in post.categories.all %}
+            <li>{{ category }}</li></lin>
+        {% endfor %}
+    </ul>
+{% endblock %}
